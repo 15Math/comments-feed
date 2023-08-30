@@ -1,0 +1,26 @@
+#commentContainer{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 8px;
+    gap: 16px;
+    margin-bottom: 8px;
+}
+
+#email{
+    font-weight: bolder;
+}
+#date{
+    font-size: small;
+}
+#info{
+    text-align: start;
+}
+
+#commentContainer > p{
+    word-wrap: break-word;
+    text-align: start;
+    width: 100%;
+}

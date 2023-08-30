@@ -3,13 +3,19 @@ import "./index.css"
 
 
 
-export default function CommentForm(){
+export default function CommentForm({addComment, comments}){
 
     const[email, setEmail] = useState("")
     const[comment, setComment] = useState("")
 
+
     function handleSubmit(ev){
         ev.preventDefault()
+        if(email != ""){
+            addComment({email, comment})
+        }else{
+            alert("ALERT: email required")
+        }
         setEmail("")
         setComment("")
     }
@@ -36,7 +42,7 @@ export default function CommentForm(){
                         rows="5"
                         value={comment}
                         onChange={(ev) => setComment(ev.target.value)}
-                        ></textarea>
+                    ></textarea>
                 </div>
                 <input type="submit" id="submitInp"/>
             </form>   
